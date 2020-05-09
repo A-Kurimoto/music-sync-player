@@ -1,0 +1,14 @@
+.player-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 20px;
+}
+
+.player-item {
+  margin: 10px 0;
+}
+
+.time {
+  border: thin solid gray;
+}

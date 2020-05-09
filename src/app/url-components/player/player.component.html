@@ -1,0 +1,19 @@
+<div class="player-container">
+
+  <input class="file-button" type="file" (change)="selectAudio($event)"
+         placeholder="Select audio file" accept="audio/*">
+
+  <ng-container *ngIf="musicFile">
+
+    <mat-form-field class="player-item">
+      <label>再生時刻を指定</label>
+      <input class="time" matNativeControl [owlDateTime]="playTimePicker" [owlDateTimeTrigger]="playTimePicker"
+             [(ngModel)]="playTime" (dateTimeChange)="setTime()">
+      <owl-date-time #playTimePicker [pickerType]="'timer'"></owl-date-time>
+    </mat-form-field>
+    <button mat-raised-button class="player-item" (click)="play()">Play</button>
+    <button mat-raised-button class="player-item" (click)="pause()">Pause</button>
+
+  </ng-container>
+
+</div>
