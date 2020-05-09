@@ -20,6 +20,7 @@ export class PlayerComponent implements OnInit {
     musicFile: string;
     audio;
     playTime: Date;
+    min = new Date();
 
     constructor(private http: HttpClient) {
     }
