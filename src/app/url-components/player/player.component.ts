@@ -61,11 +61,4 @@ export class PlayerComponent implements OnInit {
         }, targetTime.getTime() - now)
     }
 
-    play() {
-        this.audio.play();
-    }
-
-    pause() {
-        this.audio.pause();
-    }
 }
